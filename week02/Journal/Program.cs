@@ -18,6 +18,11 @@ class Program
             "What made me smile today?",
             "If you could talk to yourself an hour ago, what would you say?",
             "How did we do today?"
+            "Who was the most interesting person I interacted with today?",
+            "What was the best part of my day?",
+            "How did I see the hand of the Lord in my life today?",
+            "What was the strongest emotion I felt today?",
+            "If I had one thing I could do over today, what would it be?"
         };
 
         bool running = true;
