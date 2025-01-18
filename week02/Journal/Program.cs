@@ -6,6 +6,7 @@ class Program
     static void Main(string[] args)
     {
         // Console.WriteLine("Hello World! This is the Journal Project.");
+        // For the exceeding requirement, you can now add your name or other's name after the entry. Providing the author of the journal entry.
 
         var journal = new Journal();
         var prompts = new List<string>
