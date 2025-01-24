@@ -8,8 +8,9 @@ class Program
         // Reference reference = new Reference("Proverbs", 3, 5, 6);
         // string text = "Trust in the Lord with all your heart and lean not on your own understanding.";
 
+        // Exceeding requirements - Scripture library (located below), Get Hint (located in Word.cs)
 
-        // Make way for Scripture library - Exceeding Requirement**
+        // Make way for Scripture library
         List<Scripture> scripture = new List<Scripture>
         {
             new Scripture(new Reference("Proverbs", 3, 5, 6), "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths."),
