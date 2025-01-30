@@ -1,0 +1,117 @@
+For each program discuss the following:
+
+What does the program do?
+What are candidates for classes?
+What are the responsibilities of each class?
+
+
+Youtube Videos program
+
+What does the program do?
+- Stores information about Youtube videos and comments left on them. For each video, it tracks title, author, and length. It also manages the list of comments, each witht the commenter's name and the the comment itself.
+
+What are candidates for classes?
+- Video
+- Comment
+
+What are the responsibilities of each class?
+
+        // Class Video
+        // Title, author, length in seconds
+        // Store list of comments
+        // method to display list of comments
+        // method to display count of comments
+
+        // Class Comments
+        // attritbutes(text in comment)
+        // track name of author
+
+Class Diagram
+
++-------------------------------+            +---------------------+
+|            Video              |<>----------|     Comment         |
++-------------------------------+            +---------------------+
+| -_title: string               |            | -_name: string      |
+| -_author: string              |            | -_text: string      |
+| -_length: int                 |            +---------------------+
+| -_comments: List<Comment>     |            |                     |
++-------------------------------+            | ->GetName(): string |
+| +GetTitle(): string           |            | ->GetText(): string |
+| +GetAuthor(): string          |            +---------------------+
+| +GetLength(): int             |
+| +AddComment(comment: Comment) |
+| +GetCount(): int              |
+| +DisplayInfo(): void          |
++-------------------------------+
+
+
+
+Online Ordering program
+
+What does the program do?
+-The program handles product orders for an online store. Calculates the total price of the order, generates packing labels, and shipping labels based on customer's information. Differentiates shipping costs based on whether the customer is in USA or foreign.
+
+What are candidates for classes?
+- Order
+- Product
+- Customer
+- Address
+
+What are the responsibilities of each class? (might change)
+Order:
+	Contains a list of Product objects and a Customer object.
+	Calculates the total cost of the order.
+	Generates a packing label (lists products and their IDs).
+	Generates a shipping label (includes customer’s name and address).
+Product:
+	Tracks the name, product ID, price, and quantity.
+	Calculates the total cost based on price and quantity.
+Customer:
+	Tracks the customer’s name and address.
+	Has a method to check if the customer is in the USA (via Address).
+Address:
+	Tracks street address, city, state/province, and country.
+	Has a method to check if the address is in the USA.
+	Has a method to return a formatted string for the full address.
+
+
+Class Diagram
+
++--------------------------+        +---------------------------+
+|          Product         |        |          Address          |
++--------------------------+        +---------------------------+
+| -_name: string           |        | -_street: string          |
+| -_price: decimal         |        | -_city: string            |
+| -_productId: int         |        | -_stateProvince: string   |
+| -_quantity: int          |        | -_country: string         |
++--------------------------+        +---------------------------+
+| +GetName(): string       |        | +InUSA(): bool            |
+| +GetProductId(): int     |        | +GetFullAddress(): string |
+| +GetTotalCost(): decimal |        +---------------------------+
++--------------------------+
+          ^
+          |
+          |
+    +---------------------------+
+    |          Order            |
+    +---------------------------+
+    | -_customer: Customer      |
+    | -_products: List<Product> |
+    +---------------------------+
+    | +GetTotalPrice(): decimal |
+    | +GetPackLabel(): string   |
+    | +GetShipLabel(): string   |
+    +---------------------------+
+          ^
+          |
+          |
+    +-------------------------+
+    |         Customer        |
+    +-------------------------+
+    | -_name: string         |
+    | -_address: Address     |
+    +------------------------+
+    | +LivesInUSA(): bool    |
+    | +GetName(): string     |
+    | +GetAddress(): string  |
+    +------------------------+
