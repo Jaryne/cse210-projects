@@ -24,7 +24,7 @@ class Program
         // ctrl + l to.. i forgot.
 
         // Video List
-        Video video1 = new Video("Ekko Theory", "Arcane", 1260);
+        Video video1 = new Video("Ace Theory", "Arcane", 1260);
         Video video2 = new Video("SpiderPool", "Marvel", 616);
         Video video3 = new Video("How to say library in different languages?", "Duolinguini", 123);
         Video video4 = new Video("Ekko's Guide", "Arcane", 444);
