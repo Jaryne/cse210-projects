@@ -1,0 +1,19 @@
+What does the program do?
+- Helps user practice mindfulness through breathing, reflection, and listing.
+- Each activity will help user relax,reflect on positive experiences, and/or list things they appreciate, and still maintain a set duration.
+- It provides prompts, and show countdown or spinner during pauses.
+
+What user inputs does it have?
+- Activity selection; breathing/reflection/listing
+- Duration of selected activity; input length of set activity time (in seconds)
+
+What output does it produce?
+- Activity description
+- Activity prompts
+- Countdown/Spinner animation
+- End Message (time spent and congratulations to the user)
+
+How does the program end?
+- it ends by congratulating user after completing the activity and displaying the total time spent.
+- After a pause, returns to menu where user can pick another activity or to quit.
+
